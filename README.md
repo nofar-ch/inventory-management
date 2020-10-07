@@ -1,6 +1,5 @@
 # inventory-management
 
-Inventory Management application
 The application allows the viewing and managing of a list of items (sorted by id)  in an inventory.
 
 It allows simple actions to be performed, such as:
