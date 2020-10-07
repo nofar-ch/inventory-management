@@ -1,0 +1,29 @@
+
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    position: relative;
+    width: 70%; 
+   
+    margin: auto;
+}
+.addBtn {
+    position: absolute;
+    right:0;
+    top: 0;
+    padding: 2px
+}
+
+svg {
+    cursor: pointer;
+    margin: 10px
+}
+
+input {
+    width: 100px;
+    display: inline;
+}

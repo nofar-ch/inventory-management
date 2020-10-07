@@ -1,0 +1,42 @@
+<div class="form">
+<div class="col-md-12">
+<h2 class="text-center">Add Item</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>id:</label>
+        <input type="number" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }">
+        <div *ngIf="submitted && f.id.errors">
+          <div *ngIf="f.id.errors.required">id is required</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>name:</label>
+        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+        <div *ngIf="submitted && f.name.errors">
+          <div *ngIf="f.name.errors.required">name is required</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>description:</label>
+        <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }">
+        <div *ngIf="submitted && f.description.errors">
+          <div *ngIf="f.description.errors.required">description is required</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <label>count:</label>
+          <input type="number" formControlName="count" class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.count.errors }" 
+          min="0" step="1" oninput="validity.valid||(value='');">
+          <div *ngIf="submitted && f.count.errors">
+            <div *ngIf="f.count.errors.required">count is required</div>
+          </div>
+      </div>
+
+      <button type="submit" class="btn btn-info">Save</button>
+    </form>
+</div>
+</div>
